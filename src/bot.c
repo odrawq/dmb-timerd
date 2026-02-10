@@ -163,10 +163,11 @@ static void handle_cmd_timer(void)
 
     if (get_dmb_timer(&timer))
         tg_send_message(TG_TARGET_CHAT_ID, 0, MSG_END);
-    else if (!timer.days)
+    else if (!timer.days_left)
         tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_SOON);
     else
-        tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_TIMER_FMT, timer.days, timer.percent);
+        tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_TIMER_FMT,
+                        timer.days_left, timer.days_passed, timer.percent);
 }
 
 static void handle_unknown_cmd(void)

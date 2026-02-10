@@ -15,7 +15,8 @@
                                        "Узнай сколько тебе осталось до дембеля"
 
 #define MSG_TIMER_FMT   EMOJI_ELEPHANT " <b>До дембеля осталось</b>\n\n" \
-                                       "%dд (%d%)"
+                                       "<u>%dд</u>\n" \
+                                       "Прошло %dд (%d%)"
 
 #define MSG_SOON        EMOJI_ELEPHANT " <b>До дембеля осталось</b>\n\n" \
                                        "Меньше одного дня\n" \

@@ -23,8 +23,9 @@ int get_dmb_timer(dmb_timer_t *dest)
 
     const time_t start = mktime(&tm_start);
 
-    dest->days = left / 86400;
     dest->percent = (int) ((double) (now - start) / (end - start) * 100);
+    dest->days_left = left / 86400;
+    dest->days_passed = (now - start) / 86400;
 
     return 0;
 }

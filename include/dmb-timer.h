@@ -2,8 +2,9 @@
 
 typedef struct
 {
-    int days;
     int percent;
+    int days_left;
+    int days_passed;
 }
 dmb_timer_t;
 
