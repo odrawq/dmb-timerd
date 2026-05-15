@@ -11,18 +11,17 @@
 
 #define MSG_UNKNOWN_CMD EMOJI_FAILURE  " <b>Неизвестная команда</b>"
 
-#define MSG_START       EMOJI_GREETING " <b>Здарова слоняра</b>\n\n" \
+#define MSG_START       EMOJI_GREETING " <b>Здарова</b>\n\n" \
                                        "Узнай сколько тебе осталось до дембеля"
 
-#define MSG_TIMER_FMT   EMOJI_ELEPHANT " <b>До дембеля осталось</b>\n\n" \
+#define MSG_TIMER_FMT                  "%s <b>До дембеля осталось</b>\n\n" \
                                        "<u>%dд</u>\n" \
                                        "Прошло %dд (%d%)"
 
-#define MSG_SOON        EMOJI_ELEPHANT " <b>До дембеля осталось</b>\n\n" \
-                                       "Меньше одного дня\n" \
-                                       "Рассос мужики"
+#define MSG_SOON        EMOJI_SOLDIER  "<b>До дембеля осталось</b>\n\n" \
+                                       "Меньше одного дня"
 
-#define MSG_END         EMOJI_OK       " <b>Ты уже не слон</b>"
+#define MSG_END         EMOJI_OK       " <b>Рассос мужики</b>"
 
 #define MAINTENANCE_INLINE_KEYBOARD "{\"inline_keyboard\":[" \
                                     "[{\"text\":\"Повторить\",\"callback_data\":\"" CMD_START "\"}]" \

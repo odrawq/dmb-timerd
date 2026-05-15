@@ -167,6 +167,7 @@ static void handle_cmd_timer(void)
         tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_SOON);
     else
         tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_TIMER_FMT,
+                        timer.days_passed > (365 / 2) ? EMOJI_SOLDIER : EMOJI_ELEPHANT,
                         timer.days_left, timer.days_passed, timer.percent);
 }
 
