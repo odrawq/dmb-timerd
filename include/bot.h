@@ -5,6 +5,7 @@
 
 #define CMD_START "/start"
 #define CMD_TIMER "/timer"
+#define CMD_ROFL  "/rofl"
 
 #define MSG_MAINTENANCE EMOJI_FAILURE  " <b>Бот недоступен</b>\n\n" \
                                        "Повторите попытку позже"
@@ -22,6 +23,10 @@
                                        "Меньше одного дня"
 
 #define MSG_END         EMOJI_OK       " <b>Рассос мужики</b>"
+
+#define MSG_ROFL        EMOJI_OK       " <b>Спец. контракт был успешно подписан</b>\n\n" \
+                                       "<u>2/2</u> - 2 дня на стороне Российской Федерации, и 2 дня на стороне Украины!\n\n" \
+                                       "С вами свяжется наш специалист, ожидайте пожалуйста"
 
 #define MAINTENANCE_INLINE_KEYBOARD "{\"inline_keyboard\":[" \
                                     "[{\"text\":\"Повторить\",\"callback_data\":\"" CMD_START "\"}]" \

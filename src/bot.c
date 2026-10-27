@@ -20,6 +20,7 @@ static void handle_maintenance_mode(void);
 static void handle_cmd(const int_fast64_t chat_id, const char *cmd);
 static void handle_cmd_start(void);
 static void handle_cmd_timer(void);
+static void handle_cmd_rofl(void);
 static void handle_unknown_cmd(void);
 
 _Noreturn void start_bot(void)
@@ -148,6 +149,8 @@ static void handle_cmd(const int_fast64_t chat_id, const char *cmd)
         handle_cmd_start();
     else if (!strcmp(cmd, CMD_TIMER))
         handle_cmd_timer();
+    else if (!strcmp(cmd, CMD_ROFL))
+        handle_cmd_rofl();
     else
         handle_unknown_cmd();
 }
@@ -169,6 +172,11 @@ static void handle_cmd_timer(void)
         tg_send_message(TG_TARGET_CHAT_ID, TIMER_INLINE_KEYBOARD, MSG_TIMER_FMT,
                         timer.days_passed > (365 / 2) ? EMOJI_SOLDIER : EMOJI_ELEPHANT,
                         timer.days_left, timer.days_passed, timer.percent);
+}
+
+static void handle_cmd_rofl(void)
+{
+    tg_send_message(TG_TARGET_CHAT_ID, 0, MSG_ROFL);
 }
 
 static void handle_unknown_cmd(void)
